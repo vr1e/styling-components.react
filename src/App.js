@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
+import Newsletter from './Newsletter.inline';
+import { ThemeProvider } from './ThemeContext';
+
+const theme = {
+	header: {
+		fg: '#ff598a',
+	},
+	input: {
+		color: '#fff',
+		background: '#070222',
+		textAlign: 'center',
+	},
+	inputFocus: {
+		outline: '2px solid #5e9fff',
+	},
+};
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className='app__newsletter'>
+			<ThemeProvider theme={theme}>
+				<Newsletter />
+			</ThemeProvider>
+		</div>
+	);
 }
 
 export default App;
