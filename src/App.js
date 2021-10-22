@@ -1,6 +1,7 @@
 import './App.css';
-import Newsletter from './Newsletter.inline';
-import { ThemeProvider } from './ThemeContext';
+import Newsletter from './Newsletter.cssInJs';
+import { ThemeProvider } from 'styled-components'; // css in js
+// import { ThemeProvider } from './ThemeContext'; // inline
 
 const theme = {
 	header: {
